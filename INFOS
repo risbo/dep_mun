@@ -1,3 +1,37 @@
+-- SEQUENCE: public.municipio_gid_seq
+
+-- DROP SEQUENCE public.municipio_gid_seq;
+
+CREATE SEQUENCE public.municipio_gid_seq
+    INCREMENT 1
+    START 1
+    MINVALUE 1
+    MAXVALUE 2147483647
+    CACHE 1;
+
+ALTER SEQUENCE public.municipio_gid_seq
+    OWNER TO postgres;
+    
+
+-- SEQUENCE: public.departamento_gid_seq
+
+-- DROP SEQUENCE public.departamento_gid_seq;
+
+CREATE SEQUENCE public.departamento_gid_seq
+    INCREMENT 1
+    START 1
+    MINVALUE 1
+    MAXVALUE 2147483647
+    CACHE 1;
+
+ALTER SEQUENCE public.departamento_gid_seq
+    OWNER TO postgres;
+    
+    
+    
+    
+    
+
 -- Table: public.geo_server_departamento
 
 -- DROP TABLE public.geo_server_departamento;
