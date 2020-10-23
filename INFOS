@@ -1,1 +1,83 @@
+-- Table: public.geo_server_departamento
 
+-- DROP TABLE public.geo_server_departamento;
+
+CREATE TABLE public.geo_server_departamento
+(
+    gid integer NOT NULL DEFAULT nextval('departamento_gid_seq'::regclass),
+    dpto character varying(30) COLLATE pg_catalog."default",
+    cod_dane character varying(2) COLLATE pg_catalog."default",
+    geom geometry(MultiPolygon),
+    CONSTRAINT departamento_pkey PRIMARY KEY (gid)
+)
+WITH (
+    OIDS = FALSE
+)
+TABLESPACE pg_default;
+
+ALTER TABLE public.geo_server_departamento
+    OWNER to postgres;
+-- Index: departamento_geom_idx
+
+-- DROP INDEX public.departamento_geom_idx;
+
+CREATE INDEX departamento_geom_idx
+    ON public.geo_server_departamento USING gist
+    (geom)
+    TABLESPACE pg_default;
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    -- Table: public.geo_server_municipio
+
+-- DROP TABLE public.geo_server_municipio;
+
+CREATE TABLE public.geo_server_municipio
+(
+    gid integer NOT NULL DEFAULT nextval('municipio_gid_seq'::regclass),
+    objectid double precision,
+    codigo_dan character varying(5) COLLATE pg_catalog."default",
+    nombre character varying(50) COLLATE pg_catalog."default",
+    departamen character varying(15) COLLATE pg_catalog."default",
+    shape_leng numeric,
+    shape_area numeric,
+    hectares numeric,
+    cod_d character varying(50) COLLATE pg_catalog."default",
+    ts_nombre character varying(32) COLLATE pg_catalog."default",
+    longuitud numeric,
+    latitud numeric,
+    geom geometry(MultiPolygon),
+    CONSTRAINT municipio_pkey PRIMARY KEY (gid)
+)
+WITH (
+    OIDS = FALSE
+)
+TABLESPACE pg_default;
+
+ALTER TABLE public.geo_server_municipio
+    OWNER to postgres;
+-- Index: municipio_geom_idx
+
+-- DROP INDEX public.municipio_geom_idx;
+
+CREATE INDEX municipio_geom_idx
+    ON public.geo_server_municipio USING gist
+    (geom)
+    TABLESPACE pg_default;
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
