@@ -1,3 +1,33 @@
+
+Columna: 
+geometry 
+Geometría: 
+POLYGON 
+Dimensión: 
+XY 
+Ref. espacial: 
+WGS 84 (4326) 
+Extensión: 
+-81.73562, -4.22788 - -66.84722, 13.39473 
+
+
+
+
+
+Columna: 
+geometry 
+Geometría: 
+POLYGON 
+Dimensión: 
+XY 
+Ref. espacial: 
+MAGNA-SIRGAS / Colombia Bogota zone (3116) 
+Extensión: 
+165290.18457, 23039.05170 - 1806815.89660, 1984871.01923 
+
+
+
+
 -- SEQUENCE: public.municipio_gid_seq
 
 -- DROP SEQUENCE public.municipio_gid_seq;
